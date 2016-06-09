@@ -1,0 +1,27 @@
+.get_in_touch
+    // start get_in_touch
+    .wrap
+        // 标题 -
+        h5.heading 联系我们
+        .get-left
+            // 内容 可多p段 -
+            p 有什么意见或建议?
+        .get-right
+            // 提交页面尚未制作 -
+            form.addname(action='http://www.yangzhizhuang.net/153web.ashx', onsubmit="alert('提交成功');return false;")
+                ul
+                    li.name
+                        a.icon.user(href='#')
+                        input(type='text', name='name', placeholder='输入你的名字', required='')
+                        .clear
+                    li.email_1
+                        a.icon.mail(href='#')
+                        input(type='email', name='email', placeholder='输入你的电子邮箱', required='')
+                        .clear
+                    .clear
+                    li
+                        textarea.plain.buffer(name='content', placeholder='输入您想说的话...')
+                    input.send(type='submit', value='发送')
+                    // .send
+                        a(href='#') SEND
+        .clear
