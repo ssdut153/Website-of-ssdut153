@@ -1,4 +1,4 @@
-var cssclean = require('gulp-clean-css');
+var clean = require('gulp-clean-css');
 var fs = require('graceful-fs');
 var glob = require('glob');
 var gulp = require('gulp');
@@ -73,15 +73,22 @@ gulp.task('pug', function () {
         .pipe(gulp.dest(dirs.dist));
 });
 
+gulp.task('css', function () {
+    return gulp
+        .src([dirs.src + '/css/*.css'])
+        .pipe(clean())
+        .pipe(gulp.dest(dirs.dist + '/css'))
+});
+
 gulp.task('less', function () {
     return gulp
-        .src([dirs.src + '/css/*.less'])
+        .src([dirs.src + '/less/*.less'])
         .pipe(less())
-        .pipe(cssclean())
+        .pipe(clean())
         .pipe(gulp.dest(dirs.dist + '/css'));
 });
 
-gulp.task('minifyjs', function () {
+gulp.task('js', function () {
     return gulp
         .src([dirs.src + '/js/*.js'])
         .pipe(uglify())
@@ -90,15 +97,8 @@ gulp.task('minifyjs', function () {
 
 gulp.task('copy',[
     'copy:jquery',
-    'copy:license',
     'copy:misc'
 ]);
-
-gulp.task('copy:license', function () {
-    return gulp
-        .src('LICENSE.txt')
-        .pipe(gulp.dest(dirs.dist));
-});
 
 gulp.task('copy:jquery', function () {
     return gulp
@@ -112,7 +112,8 @@ gulp.task('copy:misc', function () {
             dirs.src + '/**/*',
             '!' + dirs.src + '/*.pug',
             '!' + dirs.src + '/includes/*.pug',
-            '!' + dirs.src + '/css/*.less',
+            '!' + dirs.src + '/css/*.css',
+            '!' + dirs.src + '/less/*.less',
             '!' + dirs.src + '/js/*.js'
         ], {
             dot: true
@@ -133,8 +134,9 @@ gulp.task('build', function (done) {
         ['clean'],
         'copy',
         'pug',
+        'css',
         'less',
-        'minifyjs',
+        'js',
         done);
 });
 
