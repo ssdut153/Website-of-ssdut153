@@ -9,15 +9,15 @@
                     li.active
                         a(href='index.html') 主页
                     li
-                        a(href='about.html',onclick='return isbuilding();') 关于我们
+                        a(href='about.html',onclick="alert('网站建设中');return false;") 关于我们
                     li
-                        a(href='services.html',onclick='return isbuilding();') 相册
+                        a(href='services.html',onclick="alert('网站建设中');return false;") 相册
                     //li
                         a(href='pages.html') 文章
                     li
-                        a(href='blog.html',onclick='return isbuilding();') 文章
+                        a(href='blog.html',onclick="alert('网站建设中');return false;") 文章
                     li
-                        a(href='contact.html',onclick='return isbuilding();') 联系我们
+                        a(href='contact.html',onclick="alert('网站建设中');return false;") 联系我们
                     li
                         a(href='http://gaokao.ssdut.cn/index.html', target='_blank') 高考加油
                     li
@@ -29,15 +29,15 @@
                     li.active
                         a(href='index.html') 主页
                     li
-                        a(href='about.html',onclick='return isbuilding();') 关于我们
+                        a(href='about.html',onclick="alert('网站建设中');return false;") 关于我们
                     li
-                        a(href='services.html',onclick='return isbuilding();') 相册
+                        a(href='services.html',onclick="alert('网站建设中');return false;") 相册
                     //li
                         a(href='pages.html') 文章
                     li
-                        a(href='blog.html',onclick='return isbuilding();') 文章
+                        a(href='blog.html',onclick="alert('网站建设中');return false;") 文章
                     li
-                        a(href='contact.html',onclick='return isbuilding();') 联系我们
+                        a(href='contact.html',onclick="alert('网站建设中');return false;") 联系我们
                     li
                         a(href='http://gaokao.ssdut.cn/index.html', target='_blank') 高考加油
                     li
@@ -47,8 +47,3 @@
                     input#bdcsMain(type='text', value='', placeholder='请输入搜索关键字...')
                     input(type='submit', value='')
             .clear
-        script.
-            function isbuilding () {
-                alert('网站建设中');
-                return false;
-            }
