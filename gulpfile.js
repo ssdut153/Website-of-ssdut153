@@ -23,7 +23,7 @@ gulp.task('archive:zip', function (done) {
     var archiver = require('archiver')('zip');
     var files = glob.sync('**/*.*', {
         'cwd': dirs.dist,
-        'dot': true // include hidden files
+        'dot': true
     });
     var output = fs.createWriteStream(archiveName);
 
@@ -68,7 +68,7 @@ gulp.task('pug', function () {
             '!' + dirs.src +  '/includes/*.pug'
         ])
         .pipe(pug({
-            pretty: true
+            /*pretty: true*/
         }))
         .pipe(gulp.dest(dirs.dist));
 });
@@ -112,6 +112,7 @@ gulp.task('copy:misc', function () {
             dirs.src + '/**/*',
             '!' + dirs.src + '/*.pug',
             '!' + dirs.src + '/includes/*.pug',
+            '!' + dirs.src + '/includes/*/*.pug',
             '!' + dirs.src + '/css/*.css',
             '!' + dirs.src + '/less/*.less',
             '!' + dirs.src + '/js/*.js'
@@ -140,4 +141,4 @@ gulp.task('build', function (done) {
         done);
 });
 
-gulp.task('default', ['build']);
+gulp.task('default', ['archive']);
