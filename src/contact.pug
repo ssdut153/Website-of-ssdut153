@@ -1,45 +1,42 @@
-doctype html
-html
-    head
-        title 大连理工大学软153级队 | 联系我们
-        include includes/head.pug
-    body
-        // start header
-        include includes/header_bg.pug
-        // start header
-        include includes/header_btm.pug
-        .header_bottom
+extends includes/layout.pug
+
+block title
+    title 大连理工大学软153级队 | 联系我们
+
+block head
+
+block content
+    // --start-content-
+    .header_bottom
         // ---end-header------
         // -start-getintouch--
-        #contact.get-intouch
-            .wrap
-                h3 Contact Us
-                .get-intouch-grids
-                    .get-intouch-left-address
-                        h4 Cras at ultrices erat, sed vulputate eros nunc at augue gravida!
-                        p 2345 Setwant natrer, 1234
-                        p Washington. United States.
-                        p (401) 1234 567
-                        p
-                            a(href='mailto:hello@mykingdom.com') hello@mykingdom.com
-                    .get-intouch-center-form
-                        h5 Say hello!
-                        form(method='post', action='contact-post.html')
-                            input.frist(type='text', value='Name', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Name';}")
-                            input(type='text', value='Email', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Email';}")
-                            textarea(onfocus="if(this.value == 'Your Message') this.value='';", onblur="if(this.value == '') this.value='Your Message';") Your Message
-                            input(type='submit', value='Send message')
-                            .clear
-                    // aToolTip js
-                    .clear
-            .map
-                iframe(width='100%', height='200', frameborder='0', scrolling='no', marginheight='0', marginwidth='0', src='https://maps.google.co.in/maps?f=q&source=s_q&hl=en&geocode=&q=India&aq=0&oq=indi&sll=44.746733,-108.533936&sspn=5.859437,13.392334&ie=UTF8&hq=&hnear=India&ll=20.593684,78.96288&spn=3.787665,6.696167&t=m&z=8&output=embed')
-        // -End-getintouch--
-        // --start footer----
-        include includes/footer.pug
-        include includes/copy.pug
-        include includes/js.pug
-        script(src='js/jquery.atooltip.js')
-        script.
-            $(function () {$('a.normalTip').aToolTip();});
-        include includes/bd.pug
+    #contact.get-intouch
+        .wrap
+            h3 Contact Us
+            .get-intouch-grids
+                .get-intouch-left-address
+                    h4 Cras at ultrices erat, sed vulputate eros nunc at augue gravida!
+                    p 2345 Setwant natrer, 1234
+                    p Washington. United States.
+                    p (401) 1234 567
+                    p
+                        a(href='mailto:hello@mykingdom.com') hello@mykingdom.com
+                .get-intouch-center-form
+                    h5 Say hello!
+                    form(method='post', action='contact-post.html')
+                        input.frist(type='text', value='Name', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Name';}")
+                        input(type='text', value='Email', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Email';}")
+                        textarea(onfocus="if(this.value == 'Your Message') this.value='';", onblur="if(this.value == '') this.value='Your Message';") Your Message
+                        input(type='submit', value='Send message')
+                        .clear
+                // aToolTip js
+                .clear
+        .map
+            iframe(width='100%', height='200', frameborder='0', scrolling='no', marginheight='0', marginwidth='0', src='https://maps.google.co.in/maps?f=q&source=s_q&hl=en&geocode=&q=India&aq=0&oq=indi&sll=44.746733,-108.533936&sspn=5.859437,13.392334&ie=UTF8&hq=&hnear=India&ll=20.593684,78.96288&spn=3.787665,6.696167&t=m&z=8&output=embed')
+    // -End-getintouch--
+block foot
+    script(src='js/jquery.atooltip.js')
+    script.
+        $(function () {
+            $('a.normalTip').aToolTip();
+        });

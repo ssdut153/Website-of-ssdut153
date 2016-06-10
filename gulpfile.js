@@ -68,7 +68,7 @@ gulp.task('pug', function () {
             '!' + dirs.src +  '/includes/*.pug'
         ])
         .pipe(pug({
-            /*pretty: true*/
+            pretty: true
         }))
         .pipe(gulp.dest(dirs.dist));
 });

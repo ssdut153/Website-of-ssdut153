@@ -2,12 +2,7 @@ doctype html
 html
     head
         title 大连理工大学软153级队 | 相册 
-        meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
-        meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-        link(href='css/style.css', rel='stylesheet', type='text/css', media='all')
-        link(rel='stylesheet', type='text/css', href='css/magnific-popup.css')
-        // ---768px-menu---
-        link(type='text/css', rel='stylesheet', href='css/jquery.mmenu.all.css')
+        include includes/head.pug
         // ---//768px-menu---
     body
         // start header
@@ -81,4 +76,4 @@ html
         script(src='js/nivo-lightbox.min.js')
         script.
             $(document).ready(function () {$('.nivo-lightbox-demo a').nivoLightbox({effect: 'fade'});});
-        include includes/bd.pug
+        include includes/plugins.pug

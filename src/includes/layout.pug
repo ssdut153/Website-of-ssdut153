@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        title
+        // 页面标题
+        block title
+        include head.pug
+        block head
+    body
+        // start header
+        include header_bg.pug
+        // start header
+        include header_btm.pug
+        block content
+        include footer.pug
+        include copy.pug
+        include js.pug
+        block foot
+        include plugins.pug

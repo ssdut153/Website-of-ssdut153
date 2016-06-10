@@ -1,52 +1,66 @@
-doctype html
-html
-    head
-        // 页面标题
-        title 大连理工大学软153级队 | 主页
-        include includes/head.pug
-        link(href='css/owl.carousel.css', rel='stylesheet')
-        link(rel='stylesheet', href='css/slippry.css')
-        // //Owl Carousel Assets
-    body
-        // start header
-        include includes/header_bg.pug
-        // start header
-        include includes/header_btm.pug
-        // -start-banner--
-        include includes/index/banner.pug
-        // 版权 -
-        .copyrights
-            | Collect from
-            a(href='http://www.cssmoban.com/', title='网站模板') 网站模板
-        // -slider--
-        // -scrooling-script-
-        // --//End-image-slider--
-        .simple-text
-            .wrap
-                // slider下主标题 -
-                h4 大连理工大学软153级队
-                // slider下副标题 -
-                p 你最好的伙伴
-        // 级队委 -
-        include includes/index/recent_works.pug
-        // 近期发表 -
-        include includes/index/last_posts.pug
-        // 声明
-        include includes/index/testimonial.pug
-        // 联系我们
-        include includes/index/get_in_touch.pug
-        include includes/footer.pug
-        include includes/copy.pug
-        include includes/js.pug
-        script(src='js/jquery-ui.js')
-        script(src='js/scripts-f0e4e0c2.js')
-        script.
-            $('#jquery-demo').slippry({/*general elements & wrapper*/slippryWrapper: '<div class="sy-box jquery-demo" />', /* wrapper to wrap everything, including pager*//* options*/adaptiveHeight: true, /* height of the sliders adapts to current slide*/useCSS: true, /* true, false -> fallback to js if no browser support*/autoHover: false, transition: 'fade'});
-        script(src='js/owl.carousel.js')
-        script.
-            $(document).ready(function () {$("#owl-demo").owlCarousel({items: 4, lazyLoad: true, autoPlay: true, navigation: true, navigationText: ["", ""], rewindNav: false, scrollPerPage: false, pagination: false, paginationNumbers: false});});
-        script(src='js/index.js')
-        script(src='js/nivo-lightbox.min.js')
-        script.
-            $(document).ready(function () {$('.nivo-lightbox-demo a').nivoLightbox({effect: 'fade'});});
-        include includes/bd.pug
+extends includes/layout.pug
+
+block title
+    title 大连理工大学软153级队 | 主页
+
+block head
+    link(href='css/owl.carousel.css', rel='stylesheet')
+    link(rel='stylesheet', href='css/slippry.css')
+
+block content
+    // -start-banner--
+    include includes/index/banner.pug
+    // 版权 -
+    .copyrights
+        | Collect from
+        a(href='http://www.cssmoban.com/', title='网站模板') 网站模板
+    // -slider--
+    // -scrooling-script-
+    // --//End-image-slider--
+    .simple-text
+        .wrap
+            // slider下主标题 -
+            h4 大连理工大学软153级队
+            // slider下副标题 -
+            p 你最好的伙伴
+    // 级队委 -
+    include includes/index/recent_works.pug
+    // 近期发表 -
+    include includes/index/last_posts.pug
+    // 声明
+    include includes/index/testimonial.pug
+    // 联系我们
+    include includes/index/get_in_touch.pug
+block foot
+    script(src='js/jquery-ui.js')
+    script(src='js/scripts-f0e4e0c2.js')
+    script.
+        $('#jquery-demo').slippry({
+            /*general elements & wrapper*/
+            slippryWrapper: '<div class="sy-box jquery-demo" />', /* wrapper to wrap everything, including pager*//* options*/
+            adaptiveHeight: true, /* height of the sliders adapts to current slide*/
+            useCSS: true, /* true, false -> fallback to js if no browser support*/
+            autoHover: false,
+            transition: 'fade'
+        });
+    script(src='js/owl.carousel.js')
+    script.
+        $(document).ready(function () {
+            $("#owl-demo").owlCarousel({
+                items: 4,
+                lazyLoad: true,
+                autoPlay: true,
+                navigation: true,
+                navigationText: ["", ""],
+                rewindNav: false,
+                scrollPerPage: false,
+                pagination: false,
+                paginationNumbers: false
+            });
+        });
+    script(src='js/index.js')
+    script(src='js/nivo-lightbox.min.js')
+    script.
+        $(document).ready(function () {
+            $('.nivo-lightbox-demo a').nivoLightbox({effect: 'fade'});
+        });
