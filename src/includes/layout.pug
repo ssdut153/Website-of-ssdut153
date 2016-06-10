@@ -1,11 +1,9 @@
 doctype html
 html
     head
-        title
-        // 页面标题
-        block title
-        include head.pug
         block head
+        title 大连理工大学软153级队 | #{title}
+        include head.pug
     body
         // start header
         include header_bg.pug
@@ -15,5 +13,5 @@ html
         include footer.pug
         include copy.pug
         include js.pug
-        block foot
+        block foot-js
         include plugins.pug

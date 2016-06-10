@@ -1,9 +1,7 @@
 extends includes/layout.pug
 
-block title
-    title 大连理工大学软153级队 | 主页
-
 block head
+    - var title = '主页'
     link(href='css/owl.carousel.css', rel='stylesheet')
     link(rel='stylesheet', href='css/slippry.css')
 
@@ -31,7 +29,7 @@ block content
     include includes/index/testimonial.pug
     // 联系我们
     include includes/index/get_in_touch.pug
-block foot
+block foot-js
     script(src='js/jquery-ui.js')
     script(src='js/scripts-f0e4e0c2.js')
     script.

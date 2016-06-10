@@ -1,79 +1,74 @@
-doctype html
-html
-    head
-        title 大连理工大学软153级队 | 相册 
-        include includes/head.pug
-        // ---//768px-menu---
-    body
-        // start header
-        include includes/header_bg.pug
-        include includes/header_btm.pug
-        .main
-            .wrap
-                .cont1.span_2_of_g1
+extends includes/layout.pug
+
+block head
+    - var title = '相册'
+
+block content
+    .main
+        .wrap
+            .cont1.span_2_of_g1
+                .section.group
+                    .col_1_of_about-box.span_1_of_about-box
+                        .nivo-lightbox-demo
+                            p
+                                a.nivo-lightbox-demo(href='images/g11.jpg', data-lightbox-gallery='gallery1')
+                                    span.rollover1
+                        img(src='images/g1.jpg', alt='')
+                    .col_1_of_about-box.span_1_of_about-box
+                        .nivo-lightbox-demo
+                            p
+                                a.nivo-lightbox-demo(href='images/g22.jpg', data-lightbox-gallery='gallery1')
+                                    span.rollover1
+                        img(src='images/g2.jpg', alt='')
+                    .col_1_of_about-box.span_1_of_about-box
+                        .nivo-lightbox-demo
+                            p
+                                a.nivo-lightbox-demo(href='images/g33.jpg', data-lightbox-gallery='gallery1')
+                                    span.rollover1
+                        img(src='images/g3.jpg', alt='')
                     .section.group
                         .col_1_of_about-box.span_1_of_about-box
                             .nivo-lightbox-demo
                                 p
-                                    a.nivo-lightbox-demo(href='images/g11.jpg', data-lightbox-gallery='gallery1')
+                                    a.nivo-lightbox-demo(href='images/g44.jpg', data-lightbox-gallery='gallery1')
                                         span.rollover1
-                            img(src='images/g1.jpg', alt='')
+                            img(src='images/g4.jpg', alt='')
                         .col_1_of_about-box.span_1_of_about-box
                             .nivo-lightbox-demo
                                 p
-                                    a.nivo-lightbox-demo(href='images/g22.jpg', data-lightbox-gallery='gallery1')
+                                    a.nivo-lightbox-demo(href='images/g55.jpg', data-lightbox-gallery='gallery1')
                                         span.rollover1
-                            img(src='images/g2.jpg', alt='')
+                            img(src='images/g5.jpg', alt='')
                         .col_1_of_about-box.span_1_of_about-box
                             .nivo-lightbox-demo
                                 p
-                                    a.nivo-lightbox-demo(href='images/g33.jpg', data-lightbox-gallery='gallery1')
+                                    a.nivo-lightbox-demo(href='images/g66.jpg', data-lightbox-gallery='gallery1')
                                         span.rollover1
-                            img(src='images/g3.jpg', alt='')
-                        .section.group
-                            .col_1_of_about-box.span_1_of_about-box
-                                .nivo-lightbox-demo
-                                    p
-                                        a.nivo-lightbox-demo(href='images/g44.jpg', data-lightbox-gallery='gallery1')
-                                            span.rollover1
-                                img(src='images/g4.jpg', alt='')
-                            .col_1_of_about-box.span_1_of_about-box
-                                .nivo-lightbox-demo
-                                    p
-                                        a.nivo-lightbox-demo(href='images/g55.jpg', data-lightbox-gallery='gallery1')
-                                            span.rollover1
-                                img(src='images/g5.jpg', alt='')
-                            .col_1_of_about-box.span_1_of_about-box
-                                .nivo-lightbox-demo
-                                    p
-                                        a.nivo-lightbox-demo(href='images/g66.jpg', data-lightbox-gallery='gallery1')
-                                            span.rollover1
-                                img(src='images/g6.jpg', alt='')
-                            .clear
-                        .section.group
-                            .col_1_of_about-box.span_1_of_about-box
-                                .nivo-lightbox-demo
-                                    p
-                                        a.nivo-lightbox-demo(href='images/g99.jpg', data-lightbox-gallery='gallery1')
-                                            span.rollover1
-                                img(src='images/g9.jpg', alt='')
-                            .col_1_of_about-box.span_1_of_about-box
-                                .nivo-lightbox-demo
-                                    p
-                                        a.nivo-lightbox-demo(href='images/g77.jpg', data-lightbox-gallery='gallery1')
-                                            span.rollover1
-                                img(src='images/g7.jpg', alt='')
-                            .col_1_of_about-box.span_1_of_about-box
-                                .nivo-lightbox-demo
-                                    p
-                                        a.nivo-lightbox-demo(href='images/g88.jpg', data-lightbox-gallery='gallery1')
-                                            span.rollover1
-                                img(src='images/g8.jpg', alt='')
-                            .clear
-        include includes/footer.pug
-        include includes/copy.pug
-        include includes/js.pug
-        script(src='js/nivo-lightbox.min.js')
+                            img(src='images/g6.jpg', alt='')
+                        .clear
+                    .section.group
+                        .col_1_of_about-box.span_1_of_about-box
+                            .nivo-lightbox-demo
+                                p
+                                    a.nivo-lightbox-demo(href='images/g99.jpg', data-lightbox-gallery='gallery1')
+                                        span.rollover1
+                            img(src='images/g9.jpg', alt='')
+                        .col_1_of_about-box.span_1_of_about-box
+                            .nivo-lightbox-demo
+                                p
+                                    a.nivo-lightbox-demo(href='images/g77.jpg', data-lightbox-gallery='gallery1')
+                                        span.rollover1
+                            img(src='images/g7.jpg', alt='')
+                        .col_1_of_about-box.span_1_of_about-box
+                            .nivo-lightbox-demo
+                                p
+                                    a.nivo-lightbox-demo(href='images/g88.jpg', data-lightbox-gallery='gallery1')
+                                        span.rollover1
+                            img(src='images/g8.jpg', alt='')
+                        .clear
+block foot-js
+    script(src='js/nivo-lightbox.min.js')
         script.
-            $(document).ready(function () {$('.nivo-lightbox-demo a').nivoLightbox({effect: 'fade'});});
-        include includes/plugins.pug
+            $(document).ready(function () {
+                $('.nivo-lightbox-demo a').nivoLightbox({effect: 'fade'});
+            });

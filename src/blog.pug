@@ -1,9 +1,7 @@
 extends includes/layout.pug
 
-block title
-    title 大连理工大学软153级队 | 文章
-
 block head
+    - var title = '文章'
 
 block content
     // --start-content-
@@ -244,4 +242,4 @@ block content
                             a(href='#')
                                 span
                         .clear
-block foot
+block foot-js

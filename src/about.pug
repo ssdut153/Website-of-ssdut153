@@ -1,9 +1,7 @@
 extends includes/layout.pug
 
-block title
-    title 大连理工大学软153级队 | 关于我们
-
 block head
+    - var title = '关于我们'
 
 block content
     // --start-content-
@@ -130,4 +128,4 @@ block content
                             p
                                 | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                     .clear
-block foot
+block foot-js
